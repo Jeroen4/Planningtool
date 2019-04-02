@@ -1,7 +1,3 @@
-<?php 
-	include 'connect.php';
-?>
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,7 +6,7 @@
 </head>
 <body>
 	<?php 
-	include 'header.php';
+	include ('header.php');
 	?>
 	<form autocomplete="off">
 		<input type="text" name="name" placeholder="naam...">
@@ -20,5 +16,21 @@
 		<input type="text" name="starttime" placeholder="starttijd">
 		<input type="text" name="players" placeholder="namen van spelers...">
 	</form>
+	<?php 
+		include ('connect.php');
+	?>
+	<h3>Lijst met spellen</h3>
+	<div class="lijst">
+		<?php 
+			$query = $conn->prepare( 'Select * FROM games');
+			$query->execute();
+			$result = $query->fetchAll();
+
+			foreach ($result as $row) {
+				echo $row['name'];
+				echo "<br>";
+			}
+		?>
+	</div>
 </body>
 </html>

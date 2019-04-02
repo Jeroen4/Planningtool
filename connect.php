@@ -15,12 +15,5 @@ catch(PDOException $e)
     echo "Connection failed: " . $e->getMessage();
     }
 
-$query = $conn->prepare( 'Select * FROM games');
-$query->execute();
-$result = $query->fetchAll();
 
-foreach ($result as $row) {
-	echo "<br>";
-	echo $row('name');
-};
 ?>

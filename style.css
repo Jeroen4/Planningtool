@@ -3,7 +3,7 @@
 	padding: 0;
 }
 nav{
-	
+	border-top: 1px solid black;
 }
 nav ul li{
 	display: inline;
@@ -13,4 +13,25 @@ nav ul li{
 nav ul li a{
 	text-decoration: none;
 	color: black;
+}
+.lijst{
+	padding-left: 2px;
+	width: 250px;
+	height: 400px;
+	font-size: 13px;
+	background-color: rgba(0,0,0,0.3);
+	border-bottom: 2px solid black;
+	border-left: 2px solid black;
+	border-right: 2px solid black;
+	margin-left: 5px;
+}
+h3{
+	padding-left: 2px;
+	width: 250px;
+	background-color: rgba(0,0,0,0.3);
+	border-bottom: 1px solid black;
+	border-top: 2px solid black;
+	border-left: 2px solid black;
+	border-right: 2px solid black;
+	margin-left: 5px;
 }
