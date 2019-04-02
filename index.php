@@ -6,8 +6,12 @@
 <html>
 <head>
 	<title>Planningstool</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
+	<?php 
+	include 'header.php';
+	?>
 	<form autocomplete="off">
 		<input type="text" name="name" placeholder="naam...">
 		<input type="text" name="age" placeholder="leeftijd...">
