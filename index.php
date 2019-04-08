@@ -2,6 +2,7 @@
 <html>
 <head>
 	<title>Planningstool</title>
+	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
@@ -19,16 +20,18 @@
 	<?php 
 		include ('connect.php');
 	?>
+
 	<h3>Lijst met spellen</h3>
 	<div class="lijst">
+
 		<?php 
 			$query = $conn->prepare( 'Select * FROM games');
 			$query->execute();
 			$result = $query->fetchAll();
 
 			foreach ($result as $row) {
-				echo $row['name'];
-				echo "<br>";
+				printf ("<a href='data.php?id=".$row['id']."'>".$row['name']."</a>");
+				printf ("<br>");
 			}
 		?>
 	</div>
