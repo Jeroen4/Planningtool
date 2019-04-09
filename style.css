@@ -18,6 +18,15 @@ header{
 	border-right: 2px solid black;
 	margin-left: 5px;
 }
+.gameInfo{
+	margin: 0 auto;
+	width: 750px;
+}
+.gameInfo > img{
+	width: 60%;
+	height: 60%;
+	margin: 0 auto;
+}
 h3{
 	padding-left: 2px;
 	width: 250px;
