@@ -9,12 +9,7 @@
 
 	<div class="gameInfo">
 	<?php 
-		$servername = "localhost";
-		$username = "root";
-		$password = "";
-		$dbname = "planningstool";
-
-	    $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+		include ('connect.php');
 			
 		$query = $conn->prepare('SELECT description, image FROM games WHERE id='.$_GET['id']);
 		$query->execute();

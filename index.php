@@ -35,5 +35,9 @@
 			}
 		?>
 	</div>
+
+	<div class="planner">
+		
+	</div>
 </body>
 </html>
