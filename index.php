@@ -8,20 +8,9 @@
 <body class="indexFlexBody">
 	<?php 
 	include ('header.php');
+	include ('connect.php');
 	?>
 	<div class="wrapper">
-		<form autocomplete="off">
-			<input type="text" name="name" placeholder="naam...">
-			<input type="text" name="game" placeholder="kies een spel...">
-			<input type="text" name="leader" placeholder="naam van uitlegger...">
-			<input type="text" name="starttime" placeholder="starttijd">
-			<input type="text" name="players" placeholder="namen van spelers...">
-		</form>
-		<?php 
-			include ('connect.php');
-		?>
-
-		
 		<div class="lijst">
 			<h2>Lijst met spellen</h2>
 			<?php 
@@ -35,6 +24,21 @@
 				}
 			?>
 		</div>
+
+		<div class="line"></div>
+
+		
+		<form autocomplete="off">
+			<h2>Maak je planning</h2>
+			<p><label>Vul hier je naam in</label><input type="text" name="name" placeholder="naam..."></p>
+			<p><label>Kies een spel</label><input type="text" name="game" placeholder="spelnaam..."></p>
+			<p><label>Kies een uitlegger</label><input type="text" name="leader" placeholder="naam van uitlegger..."></p>
+			<p><label>Vul een starttijd in</label><input type="text" name="starttime" placeholder="starttijd"></p>
+			<p><label>Wie spelen er mee?</label><input type="text" name="players" placeholder="namen van spelers..."></p>
+		</form>
+
+		<div class="line2"></div>
+
 		<div class="planner">
 			
 		</div>

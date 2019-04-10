@@ -3,13 +3,13 @@
 	padding: 0;
 }
 header{
-	border-bottom: 1px solid black;
+	border-bottom: 2px solid black;
 	text-align: center;
 	font-size: 24px;
 	padding-bottom: 5px;
 }
 .indexFlexBody{
-	display: flex;
+	display: grid;
 	flex-direction: column;
 }
 .wrapper{
@@ -19,15 +19,23 @@ header{
 .lijst{
 	width: 250px;
 	height: 425px;
-	font-size: 13px;
+	font-size: 14px;
 	background-color: rgba(0,0,0,0.3);
-	border-bottom: 2px solid black;
-	border-top: 2px solid black;
 	border-left: 2px solid black;
 	border-right: 2px solid black;
-	margin-left: 5px;
-	margin-top: 5px;
-	margin-bottom: 5px;
+	margin-left: 100px;
+}
+.lijst a{
+	color: black;
+	text-decoration: none;
+	padding-left: 2px;
+}
+.line{
+	border-left: 2px solid black;
+	margin-left: 135px;
+}
+.line2{
+	border-left: 2px solid black;
 }
 .gameInfo{
 	margin: 0 auto;
@@ -43,23 +51,32 @@ header{
 }
 h2{
 	padding-left: 2px;
-	width: 250px;
 	border-bottom: 1px solid black;
+	text-align: center;
 }
 a{
 	color: black;
-	text-decoration: none;
+	text-decoration: none;	
+}
+label{
+	display: inline-block;
+  	width:200px;
+  	padding: 2px 0px;
+}
+form{
+	background-color: rgba(0,0,0,0.3);
 }
 input{
-	display: block;
-	margin-top: 2px;
-	margin-bottom: 2px;
-	margin-left: 5px;
+	border: 1px solid black;
+	padding: 1px;
+}
+form p{
+	padding: 0px 2px;
 }
 footer{
 	text-align: center;
-	border-top: 1px solid black;
-	border-bottom: 1px solid black;
+	border-top: 2px solid black;
+	border-bottom: 2px solid black;
 	height: 40px;
 	line-height: 40px;
 }
