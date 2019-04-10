@@ -6,36 +6,45 @@ header{
 	border-bottom: 1px solid black;
 	text-align: center;
 	font-size: 24px;
+	padding-bottom: 5px;
+}
+.indexFlexBody{
+	display: flex;
+	flex-direction: column;
+}
+.wrapper{
+	display: flex;
+	flex-direction: row;
 }
 .lijst{
-	padding-left: 2px;
 	width: 250px;
-	height: 400px;
+	height: 425px;
 	font-size: 13px;
 	background-color: rgba(0,0,0,0.3);
 	border-bottom: 2px solid black;
-	border-left: 2px solid black;
-	border-right: 2px solid black;
-	margin-left: 5px;
-}
-.gameInfo{
-	margin: 0 auto;
-	width: 750px;
-}
-.gameInfo > img{
-	width: 60%;
-	height: 60%;
-	margin: 0 auto;
-}
-h3{
-	padding-left: 2px;
-	width: 250px;
-	background-color: rgba(0,0,0,0.3);
-	border-bottom: 1px solid black;
 	border-top: 2px solid black;
 	border-left: 2px solid black;
 	border-right: 2px solid black;
 	margin-left: 5px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+.gameInfo{
+	margin: 0 auto;
+	width: 750px;
+	border-left: 1px solid black;
+	border-right: 1px solid black;
+	padding: 0px 20px;
+}
+.gameInfo > img{
+	width: 45%;
+	height: 45%;
+	margin: 0 auto;
+}
+h2{
+	padding-left: 2px;
+	width: 250px;
+	border-bottom: 1px solid black;
 }
 a{
 	color: black;
@@ -46,4 +55,11 @@ input{
 	margin-top: 2px;
 	margin-bottom: 2px;
 	margin-left: 5px;
+}
+footer{
+	text-align: center;
+	border-top: 1px solid black;
+	border-bottom: 1px solid black;
+	height: 40px;
+	line-height: 40px;
 }

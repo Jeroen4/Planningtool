@@ -6,7 +6,9 @@
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-
+	<?php
+	include ("header.php"); 
+	?>
 	<div class="gameInfo">
 	<?php 
 		include ('connect.php');
@@ -17,10 +19,13 @@
 
 		foreach ($result as $row) {
 			printf ($row['description']);
-			$filepath= 'img/'.$row['image'];
-			printf ("<img src=".$filepath.">");
+			$image= 'img/'.$row['image'];
+			printf ("<img src=".$image.">");
 		}	
 	?>
 	</div>
+	<?php 
+		include ("footer.php");
+	?>
 </body>
 </html>
