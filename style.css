@@ -23,7 +23,7 @@ header{
 	background-color: rgba(0,0,0,0.3);
 	border-left: 2px solid black;
 	border-right: 2px solid black;
-	margin-left: 100px;
+	margin-left: 95px;
 }
 .lijst a{
 	color: black;
@@ -49,6 +49,23 @@ header{
 	height: 45%;
 	margin: 0 auto;
 }
+.planner{
+	width: 250px;
+	height: 425px;
+	font-size: 14px;
+	background-color: rgba(0,0,0,0.3);
+	border-left: 2px solid black;
+	border-right: 2px solid black;
+	margin-left: 125px;
+}
+#chooseGame{
+	border: 1px solid black;
+	padding: 1px;
+	width:200px;
+	height: 20px;
+	border-radius: 2px;
+	margin: 2px 0px;
+}
 h2{
 	padding-left: 2px;
 	border-bottom: 1px solid black;
@@ -62,6 +79,7 @@ label{
 	display: inline-block;
   	width:200px;
   	padding: 2px 0px;
+
 }
 form{
 	background-color: rgba(0,0,0,0.3);
@@ -69,9 +87,31 @@ form{
 input{
 	border: 1px solid black;
 	padding: 1px;
+	width:200px;
+	height: 18px;
+	border-radius: 2px;
 }
 form p{
 	padding: 0px 2px;
+}
+.btn{
+	outline: none;
+	position: relative;
+	left: 307px;
+	top: 5px;
+	background-color: white;
+	padding: 5px;
+	border: none;
+	border-radius: 2px;
+}
+.update_btn{
+	outline: none;
+	position: relative;
+	top: 5px;
+	background-color: white;
+	padding: 5px;
+	border: none;
+	border-radius: 2px;
 }
 footer{
 	text-align: center;
