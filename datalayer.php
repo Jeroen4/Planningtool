@@ -1,6 +1,6 @@
 <?php 
 include('createPlan.php');
-function createPlan($_POST){
-
+function createGamePlan($_POST){
+	
 }
 ?>
