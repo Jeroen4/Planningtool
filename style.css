@@ -40,8 +40,8 @@ header{
 .gameInfo{
 	margin: 0 auto;
 	width: 750px;
-	border-left: 1px solid black;
-	border-right: 1px solid black;
+	border-left: 2px solid black;
+	border-right: 2px solid black;
 	padding: 0px 20px;
 }
 .gameInfo > img{
