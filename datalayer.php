@@ -11,16 +11,11 @@ function getGames(){
 			printf ($row['name']);
 		}
 }
- function InsertAppointment(){
+ function insertAppointment(){
     // prepare and bind
-   		$servername = "localhost";
-		$username = "root";
-		$password = "";
-		$dbname = "planningstool";
+   		include ('connect.php');
 
-        $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);	
-
-        $stmt = $conn->prepare("INSERT INTO planning (spel, spelers, leider, starttijd, datum) VALUES (:spel, :spelers, :leider, :starttijd, :datum)");
+        $stmt = $conn->prepare("INSERT INTO planning (spel, spelers, spelleider, starttijd, datum) VALUES (:spel, :spelers, :leider, :starttijd, :datum)");
         $stmt->execute([':spel' => $_POST['spel'], ':spelers' => $_POST['spelers'], ':leider' => $_POST['leider'],  ':starttijd' => $_POST['starttijd'], ':datum' => $_POST['datum']]);
         $conn = null;
 

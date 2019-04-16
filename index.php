@@ -7,15 +7,15 @@
 </head>
 <body class="indexFlexBody">
 	<?php 
-	include ('header.php');
-	include ('connect.php');
-	include ('datalayer.php');
+	include 'header.php';
+	include 'connect.php';
+	include 'datalayer.php';
 	?>
 	<div class="wrapper">
 		<div class="lijst">
 			<h2>Lijst met spellen</h2>
 			<?php 
-				$query = $conn->prepare( 'Select * FROM games');
+				$query = $conn->prepare('Select * FROM games');
 				$query->execute();
 				$result = $query->fetchAll();
 
@@ -28,9 +28,8 @@
 
 		<div class="line"></div>
 		
-		<form autocomplete="off" action="planning.php" method="post">
+		<form autocomplete="off" action="index.php" method="post">
 			<h2>Maak je planning</h2>
-			<p><label>Vul hier je naam in</label><input type="text" name="naam" placeholder="naam..."></p>
 			<p><label>Kies een spel</label>
 				<select id="chooseGame" name="spel">
 					<option value="">...</option>
@@ -41,11 +40,11 @@
                      ?>
 				 </option>
 				</select></p>
-			<p><label>Kies een uitlegger</label><input type="text" name="leider" placeholder="naam van uitlegger..."></p>
-			<p><label>Vul een starttijd in</label><input type="time" name="starttijd" placeholder="starttijd"></p>
-			<p><label>Wie spelen er mee?</label><input type="text" name="spelers" placeholder="namen van spelers..."></p>
-			<p><label>Vul een datum in</label><input type="date" name="datum" placeholder="datum"></p>
-			<button type="submit" name="button" class="btn" onclick="">Versturen</button><?php InsertAppointment() ?><!-- create function to submit -->
+			<p><label>Wie spelen er mee?</label><input type="text" name="spelers" placeholder="namen van spelers" value=""></p>
+			<p><label>Kies een uitlegger</label><input type="text" name="leider" placeholder="naam van uitlegger..." value=""></p>
+			<p><label>Vul een starttijd in</label><input type="time" name="starttijd" placeholder="starttijd" value=""></p>
+			<p><label>Vul een datum in</label><input type="date" name="datum" placeholder="datum" value=""></p>
+			<button type="submit" name="button" class="btn" onclick="">Versturen</button><?php InsertAppointment() ?><!-- function to submit -->
 		</form>
 
 		<div class="line2"></div>
