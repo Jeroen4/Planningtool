@@ -104,15 +104,15 @@ form p{
 	border: none;
 	border-radius: 2px;
 }
-.update_link{
+.update_btn{
 	outline: none;
 	position: relative;
+	background-color: white;
 	top: 5px;
 	padding: 5px;
 	border: none;
 	border-radius: 2px;
 	color: black;
-	text-decoration: underline;
 }
 footer{
 	text-align: center;
