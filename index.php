@@ -25,8 +25,6 @@
 				}
 			?>
 		</div>
-
-		<div class="line"></div>
 		
 		<form autocomplete="off" action="index.php" method="post">
 			<h2>Maak je planning</h2>
@@ -47,24 +45,29 @@
 			<button type="submit" name="button" class="btn" onclick="">Versturen</button><?php insertAppointment() ?><!-- function to submit -->
 		</form>
 
-		<div class="line2"></div>
-
-		<div class="planner">
-			<h2>Planning</h2>
-			<?php 
-				$query = $conn->prepare('Select * FROM planning');
-				$query->execute();
-				$result = $query->fetchAll();
-
-				foreach ($result as $row) {
-					$query2 = $conn->prepare('Select * FROM games WHERE id='.$row['spel']);
-					$query2->execute();
-					$result2 = $query2->fetch();
-					printf ($result2['name'].$row['spelers'].$row['spelleider'].$row['starttijd'].$row['datum']);
-					printf ("<br>");
+		<div onscroll="myFunction()"id="planner">
+			<script>
+				function myFunction() {
+					var elmnt = document.getElementById("mplanner");
+					var x = elmnt.scrollLeft;
+			    	var y = elmnt.scrollTop;
 				}
-			?>
-			<button class="update_btn" onclick="">Wijzigen</button>
+			</script>
+			<div class="plannerContent">
+				<h2>Planning</h2>
+				<?php 
+					$query = $conn->prepare('Select * FROM planning');
+					$query->execute();
+					$result = $query->fetchAll();
+
+					foreach ($result as $row) {
+						$query2 = $conn->prepare('Select * FROM games WHERE id='.$row['spel']);
+						$query2->execute();
+						$result2 = $query2->fetch();
+					printf ("<h3>Spel:</h3> ".$result2['name']."<br>"."<h3>Spelers:</h3> ".$row['spelers']."<br>"."<h3>Spelleider: </h3> ".$row['spelleider']."<br>"."<h3>Starttijd:</h3> ".$row['starttijd']."<br>"."<h3>Datum:</h3> ".$row['datum']."<button onclick=''>Wijzigen</button>"."<hr>");
+					}
+				?>
+			</div>
 		</div>
 
 	</div>
