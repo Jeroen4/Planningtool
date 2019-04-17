@@ -7,9 +7,9 @@
 </head>
 <body class="indexFlexBody">
 	<?php 
-	include 'header.php';
-	include 'connect.php';
-	include 'datalayer.php';
+	include ('header.php');
+	include ('connect.php');
+	include ('datalayer.php');
 	?>
 	<div class="wrapper">
 		<div class="lijst">
@@ -44,14 +44,26 @@
 			<p><label>Kies een uitlegger</label><input type="text" name="leider" placeholder="naam van uitlegger..." value=""></p>
 			<p><label>Vul een starttijd in</label><input type="time" name="starttijd" placeholder="starttijd" value=""></p>
 			<p><label>Vul een datum in</label><input type="date" name="datum" placeholder="datum" value=""></p>
-			<button type="submit" name="button" class="btn" onclick="">Versturen</button><?php InsertAppointment() ?><!-- function to submit -->
+			<button type="submit" name="button" class="btn" onclick="">Versturen</button><?php insertAppointment() ?><!-- function to submit -->
 		</form>
 
 		<div class="line2"></div>
 
 		<div class="planner">
 			<h2>Planning</h2>
-			<?php include 'planning.php'; ?>
+			<?php 
+				$query = $conn->prepare('Select * FROM planning');
+				$query->execute();
+				$result = $query->fetchAll();
+
+				foreach ($result as $row) {
+					$query2 = $conn->prepare('Select * FROM games WHERE id='.$row['spel']);
+					$query2->execute();
+					$result2 = $query2->fetch();
+					printf ($result2['name'].$row['spelers'].$row['spelleider'].$row['starttijd'].$row['datum']);
+					printf ("<br>");
+				}
+			?>
 			<button class="update_btn" onclick="">Wijzigen</button>
 		</div>
 
