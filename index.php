@@ -48,7 +48,7 @@
 		<div onscroll="myFunction()"id="planner">
 			<script>
 				function myFunction() {
-					var elmnt = document.getElementById("mplanner");
+					var elmnt = document.getElementById("planner");
 					var x = elmnt.scrollLeft;
 			    	var y = elmnt.scrollTop;
 				}
