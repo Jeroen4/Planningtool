@@ -56,16 +56,7 @@
 			<div class="plannerContent">
 				<h2>Planning</h2>
 				<?php 
-					$query = $conn->prepare('Select * FROM planning');
-					$query->execute();
-					$result = $query->fetchAll();
-
-					foreach ($result as $row) {
-						$query2 = $conn->prepare('Select * FROM games WHERE id='.$row['spel']);
-						$query2->execute();
-						$result2 = $query2->fetch();
-					printf ("<h3>Spel:</h3> ".$result2['name']."<br>"."<h3>Spelers:</h3> ".$row['spelers']."<br>"."<h3>Spelleider: </h3> ".$row['spelleider']."<br>"."<h3>Starttijd:</h3> ".$row['starttijd']."<br>"."<h3>Datum:</h3> ".$row['datum']."<button onclick=''>Wijzigen</button>"."<hr>");
-					}
+				showAppointment();
 				?>
 			</div>
 		</div>
