@@ -23,7 +23,7 @@ header{
 	background-color: rgba(0,0,0,0.3);
 	border-left: 2px solid black;
 	border-right: 2px solid black;
-	margin-left: 95px;
+	margin-left: 100px;
 }
 .lijst a{
 	color: black;
@@ -59,7 +59,9 @@ header{
 	background-color: rgba(0,0,0,0.3);
 	border-left: 2px solid black;
 	border-right: 2px solid black;
-	overflow: auto;
+}
+#planner > h3{
+	margin-left: 2px;
 }
 #chooseGame{
 	border: 1px solid black;
@@ -68,6 +70,24 @@ header{
 	height: 20px;
 	border-radius: 2px;
 	margin: 2px 0px;
+}
+button.Planbtn{
+	outline: none;
+	border: 1px solid black;
+	border-radius: 4px;
+	height: 40px;
+	width: 250px;
+	margin: 0 auto;
+	margin-top: 100px;
+}
+button.Planbtn:hover{
+	cursor: pointer;
+	outline: 2px red solid;
+	font-size: 18px;
+	outline-width: 3px;
+	outline-offset: 3px;
+	border: none;
+	transition-duration: 0.2s;
 }
 h2{
 	padding-left: 2px;
@@ -114,6 +134,19 @@ form p{
 	border: none;
 	border-radius: 2px;
 }
+.btn:hover{
+	cursor: pointer;
+	outline: 2px lightgreen solid;
+	font-size: 15px;
+	outline-width: 3px;
+	outline-offset: 1.5px;
+	border: none;
+	transition-duration: 0.2s;
+}
+.nameLinks:hover{
+	font-size: 15px;
+	transition-duration: 0.2s;
+}
 button{
 	outline: none;
 	background-color: white;
@@ -122,6 +155,14 @@ button{
 	border-radius: 2px;
 	color: black;
 	margin-left: 40px;
+}
+button:hover{
+	cursor: pointer;
+	outline: 2px lightgreen solid;
+	outline-width: 3px;
+	outline-offset: 1.5px;
+	border: none;
+	transition-duration: 0.2s;
 }
 footer{
 	text-align: center;
