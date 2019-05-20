@@ -25,7 +25,7 @@
 						$result = $query->fetchAll();
 
 					 	foreach ($result as $array) {
-	                      printf('<option value="'. $array["id"].'">'. $array["name"] . '</option>');
+	                      printf('<option value="">'. $array["name"].'</option>');
                         } 
                      ?>
 				 </option>
@@ -34,7 +34,8 @@
 			<p><label>Kies een uitlegger</label><input type="text" name="leider" placeholder="naam van uitlegger..." value=""></p>
 			<p><label>Vul een starttijd in</label><input type="time" name="starttijd" placeholder="starttijd" value=""></p>
 			<p><label>Vul een datum in</label><input type="date" name="datum" placeholder="datum" value=""></p>
-			<button type="submit" name="button" class="btn" onclick="">Pin'm!</button><!-- function to submit -->
+			<button type="submit" name="button" class="pin" onclick=""><span class='replies'>Pin je planning</span>
+   			<span class='comment'>Pin'm!</span></button><!-- function to submit -->
 		</form>
 	</div>
 	

@@ -59,6 +59,7 @@ header{
 	background-color: rgba(0,0,0,0.3);
 	border-left: 2px solid black;
 	border-right: 2px solid black;
+	overflow: auto;
 }
 #planner > h3{
 	margin-left: 2px;
@@ -76,19 +77,23 @@ button.Planbtn{
 	border: 1px solid black;
 	border-radius: 4px;
 	height: 40px;
-	width: 250px;
+	width: 200px;
 	margin: 0 auto;
 	margin-top: 100px;
 }
 button.Planbtn:hover{
 	cursor: pointer;
 	outline: 2px red solid;
-	font-size: 18px;
+	font-size: 16px;
 	outline-width: 3px;
 	outline-offset: 3px;
 	border: none;
 	transition-duration: 0.2s;
 }
+button .comment { display: none; }
+button:hover .replies { display: none; }
+button:hover .comment { display: inline; }
+
 h2{
 	padding-left: 2px;
 	border-bottom: 1px solid black;
@@ -145,6 +150,7 @@ form p{
 }
 .nameLinks:hover{
 	font-size: 15px;
+	text-transform: uppercase;
 	transition-duration: 0.2s;
 }
 button{
@@ -155,12 +161,31 @@ button{
 	border-radius: 2px;
 	color: black;
 	margin-left: 40px;
+	margin-bottom: 5px;
+	width: 60px;
 }
 button:hover{
 	cursor: pointer;
 	outline: 2px lightgreen solid;
 	outline-width: 3px;
-	outline-offset: 1.5px;
+	border: none;
+	transition-duration: 0.2s;
+}
+button.pin{
+	outline: none;
+	background-color: white;
+	padding: 3px;
+	border: none;
+	border-radius: 2px;
+	color: black;
+	margin-left: 290px;
+	margin-top: 5px;
+	width: 100px;
+}
+button.pin:hover{
+	cursor: pointer;
+	outline: 2px yellow solid;
+	outline-width: 3px;
 	border: none;
 	transition-duration: 0.2s;
 }
@@ -192,3 +217,4 @@ footer{
 ::-webkit-scrollbar-thumb:hover {
   background: #555; 
 }
+

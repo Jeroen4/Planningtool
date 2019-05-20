@@ -26,7 +26,8 @@
 			?>
 		</div>
 		
-		<button name="button" class="Planbtn" onclick="window.location.href = 'create.php';">Maak een planning</button><!-- function to submit -->
+		<button name="button" class="Planbtn" onclick="window.location.href = 'create.php';"><span class="replies">Maak een planning</span>
+   			<span class="comment">Plan'm!</span></button><!-- function to submit -->
 
 		<div onscroll="myFunction()"id="planner">
 			<script>

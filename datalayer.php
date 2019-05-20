@@ -19,12 +19,13 @@ function getGames(){
 
     function showAppointment(){
     	include ('connect.php');
-    	$query = $conn->prepare('Select * FROM planning');
+    	$query = $conn->prepare('SELECT * FROM planning');
 		$query->execute();
 		$result = $query->fetchAll();
 
 		foreach ($result as $row) {
-			printf ("<h3>Spel:</h3> ".$row['spel']."<br>"."<h3>Spelers:</h3> ".$row['spelers']."<br>"."<h3>Spelleider: </h3> ".$row['spelleider']."<br>"."<h3>Starttijd:</h3> ".$row['starttijd']."<br>"."<h3>Datum:</h3> ".$row['datum']."<button onclick=''>Wijzigen</button>"."<hr>");
+			printf ("<h3>Spel:</h3> ".$row['spel']."<br>"."<h3>Spelers:</h3> ".$row['spelers']."<br>"."<h3>Spelleider: </h3> ".$row['spelleider']."<br>"."<h3>Starttijd:</h3> ".$row['starttijd']."<br>"."<h3>Datum:</h3> ".$row['datum']."<button onclick=''><span class='replies'>Wijzigen</span>
+   			<span class='comment'>Wijzig'm!</span></button>"."<hr>");
 		}
     }
 ?>
