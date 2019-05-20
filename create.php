@@ -20,12 +20,12 @@
 					<?php 
 					include ('connect.php');
 
-					$query = $conn->prepare("SELECT name FROM games");
+					$query = $conn->prepare("SELECT id, name FROM games");
 						$query->execute();
 						$result = $query->fetchAll();
 
 					 	foreach ($result as $array) {
-	                      printf('<option value="">'. $array["name"].'</option>');
+	                      printf('<option value="'. $array["id"].'">'. $array["name"] . '</option>');
                         } 
                      ?>
 				 </option>

@@ -23,9 +23,25 @@ function getGames(){
 		$query->execute();
 		$result = $query->fetchAll();
 
+		// haal alle game id's en namen op en stop in een array $games    (  $games = [ 0=>'Spel 1', 1=>'Spel2'])
+		$query_games = $conn->prepare('SELECT id, name FROM games');
+		$query_games->execute();
+		$games = $query_games->fetchAll();
+		$gamelist = [];
+		foreach($games as $game) {
+			$gamelist[$game['id']] = $game['name'];
+		}
+
 		foreach ($result as $row) {
-			printf ("<h3>Spel:</h3> ".$row['spel']."<br>"."<h3>Spelers:</h3> ".$row['spelers']."<br>"."<h3>Spelleider: </h3> ".$row['spelleider']."<br>"."<h3>Starttijd:</h3> ".$row['starttijd']."<br>"."<h3>Datum:</h3> ".$row['datum']."<button onclick=''><span class='replies'>Wijzigen</span>
+			printf ("<h3>Spel:</h3> ".$gamelist[$row['spel']]."<br>"."<h3>Spelers:</h3> ".$row['spelers']."<br>"."<h3>Spelleider: </h3> ".$row['spelleider']."<br>"."<h3>Starttijd:</h3> ".$row['starttijd']."<br>"."<h3>Datum:</h3> ".$row['datum']."<button onclick=''><span class='replies'>Wijzigen</span>
    			<span class='comment'>Wijzig'm!</span></button>"."<hr>");
 		}
+    }
+
+    function dump_and_die($object) {
+    	echo '<pre>';
+    	var_dump($object);
+    	echo '</pre>';
+    	die();
     }
 ?>
