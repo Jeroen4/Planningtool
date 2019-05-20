@@ -2,7 +2,7 @@
 include ('connect.php');
 include ('datalayer.php');
 
-insertAppointment($data);
+insertAppointment();
 
-
+header("Location: index.php");
 ?>

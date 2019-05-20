@@ -12,8 +12,8 @@ function getGames(){
 }
  function insertAppointment(){
    		include ('connect.php');
-        $stmt = $conn->prepare("INSERT INTO planning (id, spelers, spelleider, spel, starttijd, datum) VALUES (null, :spelers, :leider, :spel, :starttijd, :datum)");
-        $stmt->execute([':id' => null['id'], ':spelers' => $_POST['spelers'], ':spelleider' => $_POST['spelleider'], ':spel' => $_POST['spel'],  ':starttijd' => $_POST['starttijd'], ':datum' => $_POST['datum']]);
+        $stmt = $conn->prepare("INSERT INTO planning (spelers, spelleider, spel, starttijd, datum) VALUES (:spelers, :leider, :spel, :starttijd, :datum)");
+        $stmt->execute([':spelers' => $_POST['spelers'], ':leider' => $_POST['leider'], ':spel' => $_POST['spel'],  ':starttijd' => $_POST['starttijd'], ':datum' => $_POST['datum']]);
         $conn = null;
     }
 

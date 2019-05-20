@@ -12,7 +12,7 @@
 		include ('datalayer.php');
 		?>
 	<div class="wrapper">
-		<form autocomplete="off" action="index.php" method="POST">
+		<form autocomplete="off" action="send.php" method="POST">
 			<h2>Maak je planning</h2>
 			<p><label>Kies een spel</label>
 				<select id="chooseGame" name="spel">
